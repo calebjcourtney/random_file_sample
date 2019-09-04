@@ -20,4 +20,4 @@ sys	0m16.997s
 ```
 
 ## Run
-`dmd random_file_sample.d <percent> <inputfile> <outputfile>`
+`rdmd random_file_sample.d <percent> <inputfile> <outputfile>`
