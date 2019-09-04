@@ -18,3 +18,6 @@ real	0m36.141s
 user	0m19.596s
 sys	0m16.997s
 ```
+
+## Run
+`dmd random_file_sample.d <percent> <inputfile> <outputfile>`
