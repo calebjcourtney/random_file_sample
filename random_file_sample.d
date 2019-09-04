@@ -1,6 +1,7 @@
 import std.stdio;
 import std.conv;
 import std.random;
+import std.datetime.systime : SysTime, Clock;
 
 
 void  main(string[] args)
@@ -42,7 +43,9 @@ void  main(string[] args)
     string inFileName = args[2];
     File inFile = File(inFileName, "r");
 
-    auto rnd = Random(unpredictableSeed);
+    SysTime currentTime = Clock.currTime();
+
+    auto rnd = Random(currentTime.second);
     double randomNum;
 
     if (args.length == 3)
