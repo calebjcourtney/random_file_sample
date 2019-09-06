@@ -20,4 +20,10 @@ sys	0m16.997s
 ```
 
 ## Run
-`rdmd random_file_sample.d <percent> <inputfile> <outputfile>`
+You can specify a sample based on percent (`-p`) or line count (`-n`):
+`rdmd random_file_sample.d -p <percent> -i <inputfile> -o <outputfile>`
+`rdmd random_file_sample.d -n <linecount> -inputFile <inputfile> -outputFile <outputfile>`
+
+If you want it written to stdout, you can leave off the `-outputFile`:
+`rdmd random_file_sample.d -p <percent> -i <inputfile>`
+`rdmd random_file_sample.d -n <linecount> -inputFile <inputfile>`
