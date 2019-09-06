@@ -23,7 +23,17 @@ sys	0m13.423s
 
 $ wc -l lichess_db_sample.jsonl 
 367365 lichess_db_sample.jsonl
+
+$ time rdmd random_file_sample.d -n 367365 -i lichess_db.jsonl -o lichess_db_sample.jsonl 
+real	0m53.344s
+user	0m38.923s
+sys	0m29.846s
+
+$ wc -l lichess_db_sample.jsonl 
+367365 lichess_db_sample.jsonl
 ```
+
+When specifying the number of lines, the program takes twice as long to run, since it iterates over the file twice in the entire process.
 
 ## Run
 You can specify a sample based on percent (`-p`) or line count (`-n`):
