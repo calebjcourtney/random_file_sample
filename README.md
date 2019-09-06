@@ -13,10 +13,16 @@ OS type: 64-bit
 Ran on a 28GB .jsonl file with the following results:
 
 ```
-$ time random_file_sample 0.01 lichess_db.jsonl sample_lichess_db.jsonl
-real	0m36.141s
-user	0m19.596s
-sys	0m16.997s
+$ wc -l lichess_db.jsonl
+36695223 lichess_db.jsonl
+
+$ time rdmd random_file_sample.d -p 0.01 -i lichess_db.jsonl -o lichess_db_sample.jsonl 
+real	0m26.739s
+user	0m19.781s
+sys	0m13.423s
+
+$ wc -l lichess_db_sample.jsonl 
+367365 lichess_db_sample.jsonl
 ```
 
 ## Run
